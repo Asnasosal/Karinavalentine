@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>lab uu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: comic;
+      background-color: #ffe6e6;
+      overflow-x: hidden;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #d6336c;
+    }
+    h2{
+      font-size: 48px;
+    }
+    section {
+      padding: 50px 20px;
+    }
+    nav {
+      background-color: #ffccd5;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #d6336c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    #card {
+      font-family: Arial, Helvetica, sans-serif;
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    #card-message {
+      font-size: 2.2rem;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      z-index: 10;
+      text-align: center;
+    }
+    .heart {
+      position: absolute;
+      font-size: 2rem;
+      color: #ff4d4d;
+      animation: fall linear infinite;
+      opacity: 0.8;
+    }
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px) scale(0.5);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+    /* Раздел 2*/
+    #love-section {
+      text-align: center;
+    }
+    #reasonDisplay {
+      font-size: 1.8rem;
+      margin: 20px 0;
+      min-height: 50px;
+    }
+    #nextReason {
+      padding: 10px 20px;
+      font-size: 1.5rem;
+      background-color: #ff99aa;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #fff;
+    }
+    #nextReason:hover {
+      background-color: #ff6680;
+    }
+    /* Раздел 3*/
+    .scroll-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .scroll-container {
+      display: flex;
+      margin-top: 50px;
+      margin-bottom: 100px;
+      gap: 25px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 20px;
+      scrollbar-width: none;
+      scroll-behavior: smooth;
+    }
+
+    .scroll-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .item {
+      flex: 0 0 auto;
+      width: 300px;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 20px;
+      scroll-snap-align: center;
+      position: relative;
+    }
+
+    .scroll-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: 0.3s;
+      z-index: 10;
+    }
+
+    .scroll-btn:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .left-btn {
+      left: 5px;
+    }
+
+    .right-btn {
+      right: 5px;
+    }
+    .tenor-gif-embed{
+        margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#love-section">Why i love you?</a>
+    <a href="#photos">Cutest thing in the world</a>
+  </nav>
+
+  <div id="hearts-container"></div>
+
+  <section id="card">
+    <div id="card-message">
+      <h1>You are my valentine &#129395;</h1>
+      <div class="tenor-gif-embed" data-postid="3971686153073610452" data-share-method="host" data-aspect-ratio="1" data-width="35%"><a href="https://tenor.com/view/cat-jump-happy-happy-happy-gif-3971686153073610452">Cat Jump Happy Happy Happy Sticker</a>from <a href="https://tenor.com/search/cat+jump-stickers">Cat Jump Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    </div>
+  </section>
+
+  <section id="love-section">
+    <h2>Why I love you?</h2>
+    <div id="reasonDisplay">&#129299;&#129488;&#128572;</div>
+    <button id="nextReason">pat me to know</button>
+  </section>
+
+    <div class="scroll-wrapper" id="photos">
+      <br><br><br><br><br><br><br><br><br><br>
+      <h2>my silly gf :3 (cute)</h2>
+      <button class="scroll-btn left-btn" onclick="scrollLeft()">❮</button>
+      <div class="scroll-container" id="scrollContainer">
+        <div class="item" style="background-image: url('IMG_20250211_164017_762.jpg');">
+        </div>
+        <div class="item" style="background-image: url('IMG_20250211_164322_238.jpg');">
+        </div>
+        <div class="item" style="background-image: url('Screenshot_20250131-153749.jpg');">
+        </div>
+        <div class="item" style="background-image: url('Screenshot_20250123-012006.jpg');">
+        </div>
+        <div class="item" style="background-image: url('IMG_20250203_165817_461.jpg');">
+        </div>
+        <div class="item" style="background-image: url('Screenshot_20250123-144912.jpg');">
+        </div>
+        <div class="item" style="background-image: url('Screenshot_20250204-235943.jpg');">
+        </div>
+        <div class="item" style="background-image: url('Screenshot_20250131-153709.jpg');">
+        </div>
+        <div class="item" style="background-image: url('Screenshot_20250111-155956.jpg');">
+        </div>
+        <div class="item" style="background-image: url('Screenshot_20250119-023036.jpg');">
+        </div>
+      </div>
+      <button class="scroll-btn right-btn" onclick="scrollRight()">❯</button>
+    </div>
+
+  <script>
+    function createHearts(num) {
+      const container = document.getElementById('hearts-container');
+      for (let i = 0; i < num; i++) {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.innerHTML = '❤️';
+        // Случайное положение по горизонтали
+        heart.style.left = Math.random() * 100 + 'vw';
+        const duration = 5 + Math.random() * 5;
+        heart.style.animationDuration = duration + 's';
+
+        container.appendChild(heart);
+      }
+    }
+    createHearts(30);
+
+    // Раздел 2: "Почему я тебя люблю"
+    const reasons = [
+      "You always know how to support me.",
+      "Your smile lights up my day.", 
+      "You are the cutest thing in my life",
+      "You are a source of inspiration and joy.", 
+      "Every moment is special with you.",    
+      "You are smart, beautiful and kind.", 
+      "You are my love and my best friend.",
+      "You accept me for who I am, with all my quirks.",
+      "I feel safe and secure when I'm with you.",
+      "You are always there to listen and support me, no matter what.",
+      "Your kindness and compassion inspire me to be a better person.",
+      "You understand me without me having to say a word.",
+      "You believe in me even when I doubt myself.",
+      "You make the world around me brighter and more beautiful.",
+      "You are my closest friend and the love of my life.❤️"
+    ];
+    let currentReasonIndex = 0;
+    const reasonDisplay = document.getElementById('reasonDisplay');
+    const nextReasonBtn = document.getElementById('nextReason');
+    let firstClick = true; // Флаг для отслеживания первого клика
+
+    nextReasonBtn.addEventListener('click', () => {
+      if (firstClick) {
+        nextReasonBtn.textContent = "next reason"; 
+        firstClick = false; 
+      }
+      reasonDisplay.textContent = reasons[currentReasonIndex];
+      currentReasonIndex = (currentReasonIndex + 1) % reasons.length;
+    });
+
+// Функция для прокрутки 
+    function scrollLeft() {
+      const container = document.getElementById('scrollContainer');
+                container.scrollBy({
+                    left: -1000, 
+                    behavior: 'smooth'
+                });
+  }
+    function scrollRight() {
+        const container = document.getElementById('scrollContainer');
+        container.scrollBy({
+            left: 350,
+            behavior: 'smooth'
+        });
+  }
+  </script>
+</body>
+</html>
